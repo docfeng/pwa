@@ -56,7 +56,13 @@ var alert=function(txt){
         }
     })
 }
+
 self.addEventListener('message', function (event) {
     console.log(event.data); // 输出：'sw.updatedone'
-    alert(444)
+		//var json=JSON.parse()
+    alert("123")
+		var url="http://www.baidu.com/s?ie=UTF-8&wd=client.postMessage"||event.data;
+		fetch(url).then(function(a){
+			alert(a)
+		})
 });
